@@ -24,7 +24,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -151,11 +151,11 @@ bar {
         hidden_state hide
         modifier Mod4
         colors {
-            background #003300
+            background #333333
             statusline #ffffff
             separator #666666
 
-            focused_workspace  #009933 #006B24 #ffffff
+            focused_workspace  #808080 #8c8c8c #ffffff
             active_workspace   #333333 #5f676a #ffffff
             inactive_workspace #333333 #222222 #888888
             urgent_workspace   #2f343a #900000 #ffffff
@@ -164,21 +164,22 @@ bar {
 
 # Client window colours
 # class border  bckgrnd text    indicator  
-client.focused #009933 #003D00 #ffffff #009933
-client.focused_inactive #333333 #336600 #ffffff #484e50
+client.focused #666666 #404040 #ffffff #009933
+client.focused_inactive #333333 #222222 #ffffff #484e50
 client.unfocused #333333 #222222 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
 
 
-bindcode $mod+232 exec xbacklight - 10
-bindcode $mod+233 exec xbacklight + 10
+bindcode $mod+71 exec xbacklight - 10
+bindcode $mod+72 exec xbacklight + 10
 
-bindcode $mod+122 exec amixer set Master 5%-
-bindcode $mod+123 exec amixer set Master 5%+
+bindcode $mod+68 exec amixer sset Master 5%-
+bindcode $mod+69 exec amixer sset Master 5%+
 
-bindcode $mod+52 exec nautilus --no-desktop
-bindcode $mod+53 exec firefox
+bindcode $mod+52 exec thunar
+bindcode $mod+53 exec google-chrome-stable
 bindcode $mod+54 exec sublime
+bindcode $mod+58 exec i3lock-fancy -t "Are you ksrvtsa?"
 
-exec --no-startup-id nm-applet
-exec xrandr --output VGA1 --auto --left-of eDP1
+exec nm-applet --sm-disable
+exec xrandr --output HDMI1 --auto --left-of eDP1
