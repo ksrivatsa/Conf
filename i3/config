@@ -182,8 +182,8 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # i3-gaps related config
-gaps inner 3
-gaps outer 3
+gaps inner 6
+gaps outer 2
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -230,6 +230,8 @@ bindcode $mod+69 exec amixer sset Master 5%+
 bindcode $mod+52 exec nautilus
 bindcode $mod+53 exec google-chrome
 bindcode $mod+58 exec i3lock-fancy -t "Are you ksrvtsa?"
+
+bindcode $mod+33 exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots/'
 
 exec nitrogen --restore
 exec nm-applet --sm-disable
