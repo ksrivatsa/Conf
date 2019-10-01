@@ -1,5 +1,7 @@
 ### SETUP INSTRUCTIONS
 
+#### I3-GAPS
+
  - Install I3 Gaps. Do not install I3 first
 
 #### Install polybar.
