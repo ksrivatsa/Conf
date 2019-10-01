@@ -30,4 +30,16 @@ fc-cache -f
 #### Bluetooth
  - Install blueman and use the applet for bluetooth
 
+#### Rofi App Launcher
+ - Install rofi and rofi themes
+ - Add the config file to .config/rofi/
+ - Change i3 config to use rofi
 
+#### zsh and oh-my-zsh
+```
+sudo apt-get install zsh
+cssh -s /usr/bin/zsh {user}
+echo $SHELL
+```
+
+ - Install OMZ - https://ohmyz.sh/
